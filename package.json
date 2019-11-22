@@ -2,6 +2,9 @@
   "name": "request-logger",
   "version": "0.1.0",
   "private": false,
+  "repository": {
+    "url": "https://github.com/matiasgarciaisaia/request-logger"
+  },
   "scripts": {
     "start": "node ./index.js"
   }

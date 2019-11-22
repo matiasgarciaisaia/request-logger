@@ -5,6 +5,7 @@
   "repository": {
     "url": "https://github.com/matiasgarciaisaia/request-logger"
   },
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "start": "node ./index.js"
   }

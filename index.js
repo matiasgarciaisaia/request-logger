@@ -1,13 +1,16 @@
 const http = require('http')
+const crypto = require('crypto')
 const port = 80
 
 const requestHandler = (request, response) => {
-  console.log(`${request.method} ${request.url}`)
+  const hash = crypto.randomBytes(8).toString('hex')
+
+  console.log(`${hash} - ${request.method} ${request.url}`)
   console.log(request.headers)
   request.on('data', function(chunk) {
     console.log(`data: ${chunk}`)
   })
-  response.end('200 OK')
+  response.end(`200 OK - ${hash}\n`)
 }
 
 const server = http.createServer(requestHandler)

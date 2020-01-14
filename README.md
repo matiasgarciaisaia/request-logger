@@ -14,6 +14,14 @@ docker run --rm -Pti matiasgarciaisaia/request-logger
 
 You need `-P` to expose the port on which it's listening.
 
+To test a local version, build & run in docker:
+
+```
+docker build -t request-logger:local . && docker run --rm -Pti request-logger:local
+```
+
+Then use `docker ps` to check which port it's listening on.
+
 You can also run it locally (if you have NodeJS) by running:
 
 ```
